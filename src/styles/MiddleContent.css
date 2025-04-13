@@ -1,0 +1,120 @@
+
+.stories {
+    width: 100%;
+    max-width: 50vw;
+    overflow: hidden;
+    height: fit-content;
+    padding: 15px;
+    padding-bottom: 0px;
+}
+
+.story-head {
+    margin-bottom: 0px;
+}
+
+.caret-down{
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out;
+}
+
+.caret-down:focus{
+transform: rotate(180deg);
+}
+
+.story-pfp {
+    position: relative;
+    border: 3px solid blue;
+    bottom: 165px;
+    left: 45px;
+}
+
+.story-bg {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.add-post-btn {
+    position: relative;
+    left: 10px;
+    bottom: 60px;
+    border-radius: 60px;
+}
+
+.story {
+    height: 140px;
+    width: 130px;
+    border-radius: 20px;
+    margin-right: 40px;
+    background-color: gray;
+    display: block;
+    justify-content: center;
+}
+
+.story-wrapper {
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 0px;
+    
+}
+.scrollable-div-wrapper {
+    display: flex;
+    height: 220px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin: 0px -20px;
+}
+
+.scrollable-div {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    padding-bottom: 0px;
+}
+
+.scroller {
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+
+.scroller i:hover {
+    color: white;
+}
+
+#scrollable::-webkit-scrollbar{
+    display: none;
+}
+
+.post-textbox{
+    min-height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.post{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+
+@media(max-width: 600px) {
+    .only-desk{
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    /* .stories{
+        max-width: 100vw;
+    } */
+}

@@ -56,9 +56,12 @@ export default function MiddleContent({users}) {
         {
             if(showStory){
                 document.getElementById("stories").style.height='fit-content';
+                document.getElementById("caret-down").style.transform='rotate(180deg)';
             }
             else{
                 document.getElementById("stories").style.height='70px';
+                document.getElementById("caret-down").style.transform='rotate(0deg)';
+
             }
         },[showStory])
 
@@ -86,7 +89,7 @@ export default function MiddleContent({users}) {
             <div className='bg-light mb-5 stories' id='stories' style={{borderRadius:'20px'}}>
                 <div style={{display:'flex', justifyContent:'space-between'}}>
                     <h2 className='story-head'>Stories</h2>
-                    <button className='btn caret-down' onClick={()=>setShowStory(!showStory)}><i className='fa-solid fa-caret-down'></i></button>
+                    <button className='btn caret-down' id='caret-down' onClick={()=>setShowStory(!showStory)}><i className='fa-solid fa-caret-down'></i></button>
                 </div>
                 <div className='story-wrapper'>
 

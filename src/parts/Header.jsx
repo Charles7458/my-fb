@@ -18,10 +18,10 @@ function MyDpdItem({title, icon}){
 export default function Header({userpfp, showOffCanvas}) {
     return(
         <div className='header shadow'>
-            <div className="navbar p-3 shadow no-wrap">
+            <div className="navbar shadow no-wrap">
                 <span>
-                    <button className='btn menu-btn d-lg-none me-3' onClick={showOffCanvas}><i className='fa-solid fa-bars'></i></button>
-                    <img alt='facebook icon' width='40px' src={fbIcon} />
+                    <button className='btn menu-btn d-lg-none' onClick={showOffCanvas}><i className='fa-solid fa-bars'></i></button>
+                    <img alt='facebook icon' src={fbIcon} className='logo'/>
                 </span>
                 
                 <ul className='nav'>
@@ -49,7 +49,7 @@ export default function Header({userpfp, showOffCanvas}) {
                 </ul>
                 <i title='Home' className='fa-solid fa-house only-android'></i>
 
-                <ul className='nav nav3'>
+                <ul className='nav nav3 only-md'>
                     <li><button title='Add Post' className='btn btn-light'><i class="fa-solid fa-plus"></i></button></li>
                     <li><button title='Messenger' className='btn'><i class="fa-brands fa-facebook-messenger"></i></button></li>
                     <li><button title='Notifications' className='btn'><i class="fa-solid fa-bell"></i></button></li>
@@ -59,7 +59,7 @@ export default function Header({userpfp, showOffCanvas}) {
                     <Dropdown.Toggle title='Account' variant='light' className='dropdown-toggle me-3' type='button' data-bs-toggle='dropdown' aria-expanded={false} style={{backgroundColor:'transparent',padding:'0px',border:'none'}}>
                         <img alt='user profile picture' src={userpfp} width='30px' className='rounded-circle'/>
                     </Dropdown.Toggle>
-                    <Dropdown.Menu className='dropdown-menu-dark'>
+                    <Dropdown.Menu className='dropdown-menu'>
                         <Dropdown.Item href='#'>Profile</Dropdown.Item>
                         <Dropdown.Item href='#'>Settings</Dropdown.Item>
                         <Dropdown.Item href='#' className='text-danger'>Logout</Dropdown.Item>
@@ -67,6 +67,20 @@ export default function Header({userpfp, showOffCanvas}) {
                 </Dropdown>
 
                 </ul>
+
+                <button title='Add Post' className='btn btn-light only-sm'><i class="fa-solid fa-plus"></i></button>
+                <button title='Notifications' className='btn only-sm'><i class="fa-solid fa-bell"></i></button>
+
+                <Dropdown className='only-sm'>
+                    <Dropdown.Toggle title='Account' variant='light' className='dropdown-toggle me-3' type='button' data-bs-toggle='dropdown' aria-expanded={false} style={{backgroundColor:'transparent',padding:'0px',border:'none'}}>
+                        <img alt='user profile picture' src={userpfp} width='30px' className='rounded-circle'/>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className='dropdown-menu'>
+                        <Dropdown.Item href='#'>Profile</Dropdown.Item>
+                        <Dropdown.Item href='#'>Settings</Dropdown.Item>
+                        <Dropdown.Item href='#' className='text-danger'>Logout</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
 
             </div>
         </div>

@@ -64,3 +64,11 @@
     padding: 10px 30px;
     border: none;
 }
+
+.fa-arrow-right{
+    transform:translateX(0);
+    transition: 0.3s ease-in-out;
+}
+.fa-arrow-right:hover{
+    transform: translateX(5px);
+}

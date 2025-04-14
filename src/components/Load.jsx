@@ -15,11 +15,14 @@ export default function Load() {
     },[])
 
     return(
-        <div className='container-fluid  my-5 text-center'>
-            <img src={fbLogo} height='100px' className='my-5 mx-auto d-block'/>
-            <div className='spinner-border' role='status'>
-                <span className='visually-hidden'>Loading...</span>
+        <div className='d-flex' style={{minHeight:'100vh',justifyContent:'center',alignItems:'center'}}>
+            <div>
+                <img src={fbLogo} height='100px' className='my-5 mx-auto d-block'/>
+                <div className='spinner-border mx-auto d-block' role='status'>
+                    <span className='visually-hidden'>Loading...</span>
+                </div>
             </div>
+            
         </div>
     )
 }

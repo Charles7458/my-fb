@@ -21,6 +21,7 @@
 
 .logo{
     width: 40px;
+    margin-right: 5px;
 }
 
 .nav2 li {
@@ -61,7 +62,7 @@ input[type=text] {
 }
 
 
-i:hover {
+.header i:hover {
     color: rgb(32, 94, 252);
 }
 
@@ -80,10 +81,10 @@ i:hover {
     .nav3 li{
         margin-right: 20px;
     }
-    
+
 }
 
-@media(max-width: 750px) {
+@media(max-width: 770px) {
     
     .only-desk {
         display: none;
@@ -103,10 +104,6 @@ i:hover {
 }
 
 
-.menu-btn:focus{
-    transform: rotate(90deg);
-    transition: 0.3s ease-in-out;
-}
 
 @media(max-width: 430px) {
     .only-md{

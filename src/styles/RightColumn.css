@@ -1,12 +1,6 @@
-.column{
-    background-color: white;
-    height: 100vh;
-    width: 100%;
-}
 
 .rc-card{
     margin-bottom: 30px;
-    background-color: white;
     height: fit-content;
     width: 100%;
     padding: 20px;
@@ -24,20 +18,17 @@
 }
 
 .date-wrapper {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0px;
-    box-shadow: 0px 0px 5px 1px gray;
-    width:  60px;
-    height: 60px;
-    padding: 5px;
+    height: 50px;
+    width: 50px;
+    padding: 4px;
+    box-shadow: 0px 0px 5px 1px rgb(192, 192, 192);
     text-align: center;
-    border-radius: 20px;
+    border-radius: 15px;
     line-height: 20px;
 }
 
 .month{
-    font-size: clamp(15px, 1vw,25px);
+    font-size: 12px;
     font-weight: 500;
     color: rgb(0, 115, 255);
     display: block;
@@ -47,7 +38,7 @@
 }
 
 .date{
-    font-size: clamp(20px,1.5vw, 28px);
+    font-size: 18px;
     font-weight: 700;
     color: black;
     display: block;
@@ -57,12 +48,14 @@
 
 
 .interested{
+    font-size: 13px;
     display: block;
     margin: 0 auto;
-    background-color: rgb(32, 32, 164);
+    background-color: rgb(15, 51, 158);
     color: white;
     padding: 10px 30px;
     border: none;
+    border-radius: 5px;
 }
 
 .fa-arrow-right{
@@ -71,4 +64,114 @@
 }
 .fa-arrow-right:hover{
     transform: translateX(5px);
+}
+
+.friendreq {
+    width: 60px;
+    height: 60px;
+}
+
+.confirm-btn{
+    height: 30px;
+    width: 100px;
+    border: none;
+    background-color: rgb(15, 51, 158);
+    color: white;
+    border-radius: 8px;
+}
+
+.delete-btn{
+    height: 30px;
+    width: 100px;
+    border: none;
+    background-color: rgb(203, 203, 203);
+    border-radius: 8px;
+}
+
+.create-pg-btn{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 55, 221);
+    border: none;
+}
+
+.create-pgs-icon {
+    color: rgb(0, 55, 221);
+    padding: 3px 4px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.join-grp-btn{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(0, 55, 221);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.rc-card-3 {
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.contact-search-icon {
+    position: relative;
+    bottom: 33px;
+    left: 115px;
+}
+
+.contact-div {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 50px;
+    background-color: white;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 2px rgb(197, 197, 197);
+    padding-right: 10px;
+}
+
+.g-circle {
+    height: 10px;
+    width: 10px;
+    background-color: green;
+    border-radius: 30px;
+}
+
+.o-circle {
+    height: 10px;
+    width: 10px;
+    background-color: yellow;
+    border-radius: 30px;
+}
+
+.chat-icon {
+    height: fit-content;
+    width: fit-content; 
+    background-color: white;
+    box-shadow: 0px 0px 10px 3px rgb(200, 199, 199);
+    border-radius: 15px;
+    padding: 5px 7px;
+    position: relative;
+    top: 11px;
+    right: 10px;
+}
+
+@media(max-width:1400px){
+    .contact-search-icon {
+        position: relative;
+        bottom: 33px;
+        left: calc(115px + 1vw);
+    }
+}
+
+@media(max-width:1132px){
+    .contact-search-icon {
+        position: relative;
+        bottom: 33px;
+        left: 115px;
+    }
 }

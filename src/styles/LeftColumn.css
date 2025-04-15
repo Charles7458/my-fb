@@ -1,6 +1,14 @@
 
 .LeftColumn{
+    width: 100%;
+    height: fit-content;
     padding: 20px;
-    background-color: white;
     border-radius: 20px;
+    margin-left: 10px;
 }
+
+.List-head {
+    font-weight: 600;
+    color: gray;
+}
+

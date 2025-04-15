@@ -68,7 +68,7 @@ export default function Home() {
             id: 10,
             role: 'friend-9',
             pfpUrl: plain
-        },
+        }
     ]
 
     const [showMenu, setShowMenu] = useState(false)
@@ -76,21 +76,32 @@ export default function Home() {
         <div className="AppBody">
             <Header userpfp={users[0].pfpUrl} showOffCanvas={()=>setShowMenu(true)}/>
             <div className="MainPage">
-                <div className='d-none d-lg-block LeftColumn'>
-                    <LeftColumn  pfp={users[0].pfpUrl}/>
+
+                <div className="d-none d-xxl-block invis-scroll" style={{height:'100vh',overflowY:'scroll'}}>
+                    <div className="d-flex" style={{height:"140vh"}}>
+                        <LeftColumn  pfp={users[0].pfpUrl}/>
+                    </div>
                 </div>
                 
                 <OffCanvas show={showMenu} onHide={()=>setShowMenu(false)} >
                     <OffCanvas.Header closeButton></OffCanvas.Header>
-                    <OffCanvas.Body>
-                        <LeftColumn />
+                    <OffCanvas.Body style={{overflowX:'hidden'}}>
+                        <LeftColumn pfp={users[0].pfpUrl}/>
                     </OffCanvas.Body>
                 </OffCanvas>
-                <MiddleContent users={users}/>
 
-                <div className="d-none d-md-block">
-                    <RightColumn />
+                <div className="invis-scroll" style={{height:'100vh',overflowY:'scroll'}}>
+                    <div className="d-flex" style={{height:'150vh'}}>
+                        <MiddleContent users={users}/>
+                    </div>
                 </div>
+                    
+                <div className="d-none d-lg-block invis-scroll" style={{height:'100vh',overflowY:'scroll'}}>
+                    <div className="d-flex" style={{height:'170vh'}}>
+                        <RightColumn />
+                    </div>
+                </div>
+
             </div>
         </div>
     )

@@ -3,30 +3,20 @@ import '../styles/header.css'
 import Dropdown from 'react-bootstrap/Dropdown'
 import fbIcon from '../assets/images/fb-logo.png'
 
-function MyDpdItem({title, icon}){
-    return(
-        <div>
-            <hr></hr>
-            <div style={{alignItems:'center',justifyContent:'center',display:'flex',width:'100%'}}>
-                <i title={title} className={icon} style={{paddingBottom:'5px'}}></i>
-                <h3 style={{display:'inline', marginLeft:'30px'}}>{title}</h3>
-            </div>
-        </div>
-    )
-}
+
 
 export default function Header({userpfp, showOffCanvas}) {
     return(
         <div className='header shadow'>
             <div className="navbar shadow no-wrap">
                 <span>
-                    <button className='btn menu-btn d-lg-none' onClick={showOffCanvas}><i className='fa-solid fa-bars'></i></button>
+                    <button className='btn menu-btn d-xxl-none' onClick={showOffCanvas}><i className='fa-solid fa-bars'></i></button>
                     <img alt='facebook icon' src={fbIcon} className='logo'/>
                 </span>
                 
                 <ul className='nav'>
                     <li><input type='text' placeholder='Search' className='only-desk' style={{textAlign:'start',padding:'0px 20px 0px 20px',borderRadius: 'clamp(20px, 10vw, 30px)',
-    height: '40px', width: 'clamp(130px, 20vw, 400px)'}}/></li>
+    height: '40px', width: 'clamp(130px, 15vw, 300px)'}}/></li>
                     <li><i className="fa-solid fa-magnifying-glass rel-icon only-desk"></i></li>
                     <li><Dropdown className='only-android'>
                             <Dropdown.Toggle title='Account' variant='dark' className='' data-bs-toggle='dropdown' aria-expanded={false} style={{backgroundColor:'transparent',padding:'0px',border:'none'}}>
@@ -57,7 +47,7 @@ export default function Header({userpfp, showOffCanvas}) {
 
                 <Dropdown >
                     <Dropdown.Toggle title='Account' variant='light' className='dropdown-toggle me-3' type='button' data-bs-toggle='dropdown' aria-expanded={false} style={{backgroundColor:'transparent',padding:'0px',border:'none'}}>
-                        <img alt='user profile picture' src={userpfp} width='30px' className='rounded-circle'/>
+                        <img alt='user profile picture' src={userpfp} height='35px' width='35px' className='rounded-circle'/>
                     </Dropdown.Toggle>
                     <Dropdown.Menu className='dropdown-menu'>
                         <Dropdown.Item href='#'>Profile</Dropdown.Item>

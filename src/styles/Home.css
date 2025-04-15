@@ -4,46 +4,51 @@
     box-sizing: border-box;
 }
 
+.invis-scroll::-webkit-scrollbar{
+    display: none;
+}
+
+button:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(0.95);
+}
+
 .AppBody {
-    min-height: 100vw;
+    min-height: 100vh;
     height: fit-content;
     background-color: rgb(98, 173, 239);
-    padding-top: 90px;
+    padding-top: 80px;
     padding-bottom: 0;
 }
 
 .MainPage {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 300px 2fr 1fr;
     column-gap: 20px;
     padding-right: 10px;
     min-height: 100vh;
     max-width: 100vw;
 }
 
-.LeftColumn{
-    padding: 20px;
-    background-color: white;
-    border-radius: 20px;
-    margin-left: 10px;
-}
 
-@media(max-width:930px) {
+@media(max-width:1400px) {
     .MainPage {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 55vw 1fr;
     padding-left: 20px;
     }
 }
 
-@media(max-width: 500px) {
+
+
+@media(max-width: 980px) {
     .MainPage {
         grid-template-columns: 1fr;
+        align-content: center;
+        align-items: center;
         width: 100%;
         padding: 0;
         column-gap: 0;
+        align-self: center;
     }
 
-    .stories {
-        max-width: 100%;
-    }
 }

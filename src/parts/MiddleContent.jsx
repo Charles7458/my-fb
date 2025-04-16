@@ -98,7 +98,8 @@ export default function MiddleContent({users}) {
         const temp = await  new Promise((resolve, reject)=>setTimeout(()=>{
             const newPost = {
                 id: ++postId,
-                content: postText
+                content: postText,
+                likes: 0, comments:0
             }
     
             setPosts([...posts, newPost]);

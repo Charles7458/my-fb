@@ -23,7 +23,7 @@ export default function Header({userpfp, showOffCanvas}) {
                                 <i type='button' class="fa-solid fa-magnifying-glass search-btn"></i>
                             </Dropdown.Toggle>
                             <Dropdown.Menu className='dropdown-menu'>
-                                <div style={{padding:'10px 30px',display:'flex',width:'40vw'}}>
+                                <div style={{padding:'10px 30px',display:'flex',width:'fit-content'}}>
                                     <input type='text' placeholder='Search' style={{textAlign:'start',padding:'0px 20px 0px 20px',borderRadius: '20px',height:'40px'}}/>
                                     <i type='button' class="fa-solid fa-magnifying-glass search2"></i>
                                 </div>

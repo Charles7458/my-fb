@@ -3,9 +3,10 @@ import { useState, useEffect, useMemo} from 'react';
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import '../styles/MiddleContent.css'
+import reactions from '../assets/images/reactions.png';
 
 //post component
-function Post({pfp, username, content}){
+function Post({pfp, username, content, likes, comments}){
     return(
         <div className='post'>
             <div className='mb-3 d-flex' style={{alignItems:'center'}}>
@@ -13,7 +14,13 @@ function Post({pfp, username, content}){
                 <h5 className='ms-3 blue'>{username}</h5>
             </div>
                 <p>{content}</p>
-            <div className='d-flex'><p>Likes: 1</p><p style={{marginLeft:'100px'}}>Comments: 0</p></div>
+            <div className='d-flex'>
+                <img src={reactions} height='20px' alt='reactions-icon'/><p className='ms-2'>{likes}</p>
+                <div style={{marginLeft:'100px', display:'flex'}}>
+                    <i className='fa-solid fa-comment-dots' style={{padding:'5px'}}></i>
+                    <p className='ms-2'></p>{comments}
+                </div>
+            </div>
         </div>
     )
 }
@@ -53,11 +60,13 @@ export default function MiddleContent({users}) {
         [
             {
                 id: 111,
-                content: "Hello World. This is my first fake fb post. XD"
+                content: "Hello World. This is my first fake fb post. XD",
+                likes: 15, comments: 10
             },
             {
                 id: 112,
-                content: "This is my second post!!!"
+                content: "This is my second post!!!",
+                likes: 6, comments: 1
             }
         ]);
 
@@ -167,12 +176,12 @@ export default function MiddleContent({users}) {
         >
           <Tab eventKey="Recent" title="Recent">
             {recentOrder.map(  (post)=> {
-                    return <Post key={post.id} username='Myself' pfp={users[0].pfpUrl} content={post.content}/>
+                    return <Post key={post.id} username='Myself' pfp={users[0].pfpUrl} content={post.content} likes={post.likes} comments={post.comments}/>
             })}
           </Tab>
           <Tab eventKey="TimeCreated" title="From Oldest">
             {posts.map(  (post)=> {
-                    return <Post key={post.id} username='Myself' pfp={users[0].pfpUrl} content={post.content}/>
+                    return <Post key={post.id} username='Myself' pfp={users[0].pfpUrl} content={post.content} likes={post.likes} comments={post.comments}/>
             })}
           </Tab>
         

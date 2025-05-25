@@ -25,7 +25,7 @@ function List({title, children}){
 
 function ListItem({img, name}) {
     return(
-        <li className='nav-item mb-2'>
+        <li className='nav-item mb-2 list-item'>
             <a href="#/home" className='nav-link' style={{padding:'0'}} alt='link image'>
                 <img className='rounded-circle' src={img} height="30px" width="30px" style={{backgroundColor:'rgb(231, 231, 231)', marginRight:'15px'}}/>
                 <b style={{fontSize:'12px', fontWeight:'400', color:'black'}}>{name}</b>
@@ -36,7 +36,7 @@ function ListItem({img, name}) {
 
 function GameListItem({img, name}) {
     return(
-        <li className='nav-item mb-2'>
+        <li className='nav-item mb-2 list-item'>
             <a href="#/home" className='nav-link' style={{padding:'0'}} alt='link image'>
                 <img src={img} height="30px" width="30px" style={{backgroundColor:'rgb(231, 231, 231)', marginRight:'15px', borderRadius:'5px'}}/>
                 <b style={{fontSize:'12px', fontWeight:'400', color:'black'}}>{name}</b>

@@ -11,7 +11,7 @@ export default function Load() {
     useEffect( () => {
         setTimeout( ()=>{
             nav('/home')
-        },5000)
+        },3000)
     },[])
 
     return(

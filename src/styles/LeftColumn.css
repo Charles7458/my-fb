@@ -12,3 +12,11 @@
     color: gray;
 }
 
+.list-item {
+    border-radius: 10px;
+}
+
+.list-item:hover {
+    background-color: gainsboro;
+    transition: 0.3s ease-in-out
+}
